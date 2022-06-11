@@ -2,6 +2,13 @@
 name = "rust_math"
 version = "0.1.0"
 edition = "2021"
+description = "Math library written in Rust"
+documentation = "https://github.com/bktech2021/rust_math"
+readme = "README.md"
+repository = "https://github.com/bktech2021/rust_math"
+license = "MIT"
+license-file = "LICENSE"
+keywords = ["math", "list", "trigonometry"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
