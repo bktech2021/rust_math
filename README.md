@@ -1,5 +1,5 @@
 # rust_math
-Math library written in Rust.\n
+Math library written in Rust.\
 Operations for integer lists.
 
 ## Adding to your project
