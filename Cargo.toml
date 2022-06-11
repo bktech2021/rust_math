@@ -6,7 +6,6 @@ description = "Math library written in Rust"
 documentation = "https://github.com/bktech2021/rust_math"
 readme = "README.md"
 repository = "https://github.com/bktech2021/rust_math"
-license = "MIT"
 license-file = "LICENSE"
 keywords = ["math", "list", "trigonometry"]
 
