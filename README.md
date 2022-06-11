@@ -46,9 +46,9 @@ Just add ```rust_math = { git = "https://github.com/bktech2021/rust_math" }``` t
 *Finds secant of angle in degrees*
 ### rust_math::trigonometry::cosec(ang: f32) -> f32 { ... } :
 *Finds cosecant of angle in degrees*
-### rust_math::trigonometry::deg2rad
+### rust_math::trigonometry::deg2rad(ang: f32) -> f32 { ... } :
 *Converts degrees to radians*
-### rust_math::trigonometry::rad2deg
+### rust_math::trigonometry::rad2deg(ang: f32) -> f32 { ... } :
 *Converts radians to degrees*
-### rust_math::trigonometry::find_quadrant
+### rust_math::trigonometry::find_quadrant(angle: f32) -> i32 { ... } :
 *Finds quadrant of angle in degrees*
