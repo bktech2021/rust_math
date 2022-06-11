@@ -256,24 +256,33 @@ pub mod trigonometry {
 
         //2. Reduce angle between 90 and 0
         let quadrant = find_quadrant(angle);
-        if quadrant == 2{
+        if quadrant == 2 {
             return -1.0 * tan(180.0 - angle);
-        }
-        else if quadrant == 1 {
+        } else if quadrant == 1 {
             if angle >= 45.0 {
                 //3. Cofunction
                 return 1.0 / tan(90.0 - angle);
-            }
-            else if angle < 45.0 {
-                if angle >= 22.5{
-                    return (2.0 * tan(angle / 2.0)) / (1.0 - tan(angle/2.0).powf(2.0));
-                }
-                else if angle < 22.5 {
+            } else if angle < 45.0 {
+                if angle >= 22.5 {
+                    return (2.0 * tan(angle / 2.0)) / (1.0 - tan(angle / 2.0).powf(2.0));
+                } else if angle < 22.5 {
                     angle = deg2rad(angle);
-                    return angle + (angle.powf(3.0) / 3.0) + (2.0* angle.powf(5.0) / 15.0) + (17.0 * angle.powf(7.0) / 315.0);
+                    return angle
+                        + (angle.powf(3.0) / 3.0)
+                        + (2.0 * angle.powf(5.0) / 15.0)
+                        + (17.0 * angle.powf(7.0) / 315.0);
                 }
             }
         }
         return -1.0;
+    }
+    pub fn cotan(ang: f32) -> f32 {
+        return 1.0 / tan(ang);
+    }
+    pub fn sec(ang: f32) -> f32 {
+        return 1.0 / cos(ang);
+    }
+    pub fn cosec(ang: f32) -> f32 {
+        return 1.0 / sin(ang);
     }
 }
