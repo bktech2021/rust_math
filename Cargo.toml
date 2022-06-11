@@ -1,6 +1,6 @@
 [package]
 name = "rust_math"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Math library written in Rust"
 documentation = "https://github.com/bktech2021/rust_math"
