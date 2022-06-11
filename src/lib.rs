@@ -33,7 +33,7 @@ pub mod list {
     }
 
     //This function works whether the list is sorted or not, if sorted, returns med of the list, else -1. Uses extra resource. (May be a problem for old systems)
-    pub fn safe_med(list: &mut [usize]) -> i32 {
+    pub fn safe_med(list: &[usize]) -> i32 {
         if check_sorted(list) {
             return med(list);
         } else {
