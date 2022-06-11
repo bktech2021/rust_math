@@ -2,7 +2,7 @@
 Math library written in Rust.
 Operations for integer lists.
 ## Adding to your project
-Just add ```rust_math = { git = "https://github.com/bktech2021/rust_math" }``` to Cargo.toml file.
+Just add ```rust_math = "0.1.0"``` to Cargo.toml file.
 ## Functions For lists
 ### rust_math::list::bubble_sort(list: &mut [usize]) { ... } :
 *Sorts the list with algorithm bubble sort*
