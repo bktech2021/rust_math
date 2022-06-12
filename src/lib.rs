@@ -127,6 +127,21 @@ pub mod list {
 
 #[allow(dead_code)]
 pub mod num {
+    pub fn abs(num: f32) -> f32 {
+        if num < 0.0 {
+            return -num;
+        } else {
+            return num;
+        }
+    }
+
+    pub fn sqrt(num: f32) -> f32 {
+        let mut number = num;
+        while abs(num - number * number) > 0.00001 {
+            number = (number + num / number) / 2.00;
+        }
+        return number;
+    }
     //This function returns the factorial of the number.
     pub fn factorial(num: i128) -> i128 {
         if num == 0 {
@@ -294,5 +309,31 @@ pub mod trigonometry {
     }
     pub fn cosec(ang: f32) -> f32 {
         return 1.0 / sin(ang);
+    }
+    pub fn arctan(x: f32) -> f32 {
+        let y = x;
+        if y < 0.0 {
+            return -1.0 * arctan(-1.0 * y);
+        } else
+        /* if positive */
+        {
+            if y < 1.0 {
+                if y <= 0.267949 {
+                    return y - (y.powf(3.0) / 3.0) + (y.powf(5.0) / 5.0);
+                } else {
+                    return (super::numbers::pi() / 6.0)
+                        + arctan((super::num::sqrt(3.0) * y) - 1.0)
+                            / arctan(super::num::sqrt(3.0) + y);
+                }
+            } else {
+                return (super::numbers::pi() / 2.0) - arctan(1.0 / y);
+            }
+        }
+    }
+    pub fn arcsin(x: f32) -> f32 {
+        return arctan(x / super::num::sqrt(1.0 - x.powf(2.0)));
+    }
+    pub fn arccos(x: f32) -> f32 {
+        return arctan(super::num::sqrt(1.0 - x.powf(2.0)) / x);
     }
 }
