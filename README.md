@@ -50,6 +50,12 @@ Just add ```rust_math = "0.1.3"``` to Cargo.toml file.
 *Finds secant of angle in degrees*
 ### rust_math::trigonometry::cosec(ang: f32) -> f32 { ... } :
 *Finds cosecant of angle in degrees*
+### rust_math::trigonometry::arcsin(ang: f32) -> f32 { ... } :
+*Finds arcsine of number*
+### rust_math::trigonometry::arctan(ang: f32) -> f32 { ... } :
+*Finds arctangent of number*
+### rust_math::trigonometry::arccos(ang: f32) -> f32 { ... } :
+*Finds arccosine of number*
 ### rust_math::trigonometry::deg2rad(ang: f32) -> f32 { ... } :
 *Converts degrees to radians*
 ### rust_math::trigonometry::rad2deg(ang: f32) -> f32 { ... } :

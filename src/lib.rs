@@ -321,9 +321,11 @@ pub mod trigonometry {
                 if y <= 0.267949 {
                     return y - (y.powf(3.0) / 3.0) + (y.powf(5.0) / 5.0);
                 } else {
-                    return (super::numbers::pi() / 6.0)
-                        + arctan((super::num::sqrt(3.0) * y) - 1.0)
-                            / arctan(super::num::sqrt(3.0) + y);
+                    return rad2deg(
+                        (super::numbers::pi() / 6.0)
+                            + arctan((super::num::sqrt(3.0) * y) - 1.0)
+                                / arctan(super::num::sqrt(3.0) + y),
+                    );
                 }
             } else {
                 return (super::numbers::pi() / 2.0) - arctan(1.0 / y);
