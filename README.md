@@ -1,11 +1,13 @@
 # rust_math
 Math library written in Rust.
-Operations for integer lists.
+Functions for integer lists, for numbers, and trigonometry functions.
 ## Adding to your project
-Just add ```rust_math = "0.1.0"``` to Cargo.toml file.
+Just add ```rust_math = "0.1.2"``` to Cargo.toml file.
 ## Functions For lists
 ### rust_math::list::bubble_sort(list: &mut [usize]) { ... } :
 *Sorts the list with algorithm bubble sort*
+### rust_math::list::reverse_bsort(list: &mut [usize]) { ... } :
+*Bubble sort but reversed*
 ### rust_math::list::med(list: &[usize]) -> i32 { ... } :
 *This function returns median of the list*
 ### rust_math::list::safe_med(list: &[usize]) -> i32 { ... } :

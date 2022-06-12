@@ -18,6 +18,16 @@ pub mod list {
         }
     }
 
+    pub fn reverse_bsort(list: &mut [usize]) {
+        for _ in 0..list.len() {
+            for j in 0..(&list.len() - 1) {
+                if list[j] < list[j + 1] {
+                    list.swap(j, j + 1);
+                }
+            }
+        }
+    }
+
     //THIS FUNCTION NEEDS SORTED ARRAY
     pub fn med(list: &[usize]) -> i32 {
         let len = list.len();
@@ -200,9 +210,9 @@ pub mod trigonometry {
         }
 
         //3. Using the cofunction
-        if angle > 45.0 {
+        if angle >= 45.0 {
             return cos(90.0 - angle);
-        } else if angle <= 45.0 {
+        } else if angle < 45.0 {
             //4. Using the sine polynomial
             angle = deg2rad(angle);
             return angle - (angle.powf(3.0) / 6.0) + (angle.powf(5.0) / 120.0);
@@ -223,9 +233,9 @@ pub mod trigonometry {
         let quadrant = find_quadrant(angle);
         if quadrant == 1 {
             //3. Using cofunction
-            if angle > 45.0 {
+            if angle >= 45.0 {
                 return sin(90.0 - angle);
-            } else if angle <= 45.0 {
+            } else if angle < 45.0 {
                 angle = deg2rad(angle);
                 //4. Using cosine polynomial
                 return 1.0 - (angle.powf(2.0) / 2.0) + (angle.powf(4.0) / 24.0)
