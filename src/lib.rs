@@ -153,11 +153,26 @@ pub mod num {
 
     //This function checks if number prime or not
     pub fn is_prime(number: i32) -> bool {
-        if number % 2 == 0 || number % 3 == 0 || number % 5 == 0 || number % 7 == 0 {
-            return false;
-        } else {
-            return true;
+        /*
+        Using 6k + 1 optimization: all numbers are expresible as 6k + i with i = {-1, 0, 1, 2, 3, 4}.
+        Test if n is divisible by 2 or 3, with that you remove: 6k, 6k + 2, 6k + 4, 6k + 3.
+        This means that you only have to test numbers of the form 6k - 1 and 6k + 1 less than sqrt(n)
+        These numbers are 5, 11, 17, 23, 29, 35... and 7, 13, 19, 25, 31, 37...
+        */
+        if number == 2 || number == 3 {
+            return true
         }
+        if number%2 == 0 || number%3 == 0 {
+            return false
+        }
+        
+        for i in (1..).map(|k| 6 * k - 1).take_while(|m| m * m <= number) {
+            if number%i == 0 || number%(i+2) == 0 {
+                return false
+            }
+        }
+        
+        return true
     }
 
     //This function finds greatest common divisor of two numbers
