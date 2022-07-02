@@ -2,7 +2,7 @@
 Math library written in Rust.
 Functions for integer lists, for numbers, and trigonometry functions.
 ## Adding to your project
-Just add ```rust_math = "0.2.3"``` to Cargo.toml file.
+Just add ```rust_math = "0.2.4"``` to Cargo.toml file.
 ## Functions For lists
 ### rust_math::list::bubble_sort(list: &mut [usize]) { ... } :
 *Sorts the list with algorithm bubble sort*

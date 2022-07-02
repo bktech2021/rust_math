@@ -86,7 +86,7 @@ pub mod list {
         let mut sum: f32 = 0.00;
         let len = list.len() as f32 - 1.00;
         for i in list {
-            sum += (*i as f32 - avg).powf(2.00);
+            sum += super::num::abs((*i as f32 - avg).powf(2.00));
         }
         let std_dev = (sum / len).sqrt();
         return std_dev;
