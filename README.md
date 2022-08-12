@@ -37,6 +37,8 @@ Just add ```rust_math = "0.2.5"``` to Cargo.toml file.
 *Finds greatest common divisor of two numbers*
 ### rust_math::num::lcm(a: i32, b: i32) -> i32 { ... } :
 *Finds least common of 2 numbers*
+### rust_math::num::prime_factor(num: i32) -> Vec<i32> { ... } :
+*Find prime factors of given number*
 ## Trigonometry
 ### rust_math::trigonometry::sin(ang: f32) -> f32 { ... } :
 *Finds sine of angle in degrees*

@@ -160,19 +160,19 @@ pub mod num {
         These numbers are 5, 11, 17, 23, 29, 35... and 7, 13, 19, 25, 31, 37...
         */
         if number == 2 || number == 3 {
-            return true
+            return true;
         }
-        if number%2 == 0 || number%3 == 0 {
-            return false
+        if number % 2 == 0 || number % 3 == 0 {
+            return false;
         }
-        
+
         for i in (1..).map(|k| 6 * k - 1).take_while(|m| m * m <= number) {
-            if number%i == 0 || number%(i+2) == 0 {
-                return false
+            if number % i == 0 || number % (i + 2) == 0 {
+                return false;
             }
         }
-        
-        return true
+
+        return true;
     }
 
     //This function finds greatest common divisor of two numbers
@@ -187,6 +187,22 @@ pub mod num {
     //This function finds least common multiple of two numbers
     pub fn lcm(a: i32, b: i32) -> i32 {
         return a * b / gcd(a, b);
+    }
+
+    //This is for finding prime factors
+    pub fn prime_factor(int32: i32) -> Vec<i32> {
+        let mut c = 2;
+        let mut iint32 = int32;
+        let mut ret: Vec<i32> = Vec::new();
+        while iint32 > 1 {
+            if iint32 % c == 0 {
+                ret.push(c);
+                iint32 /= c;
+            } else {
+                c += 1;
+            }
+        }
+        return ret;
     }
 }
 
