@@ -1,8 +1,6 @@
 # rust_math
 Math library written in Rust.
 Functions for integer lists, for numbers, and trigonometry functions.
-## Adding to your project
-Just add ```rust_math = "0.2.6"``` to Cargo.toml file.
 ## Functions For lists
 ### rust_math::list::bubble_sort(list: &mut [usize]) { ... } :
 *Sorts the list with algorithm bubble sort*
@@ -64,3 +62,8 @@ Just add ```rust_math = "0.2.6"``` to Cargo.toml file.
 *Converts radians to degrees*
 ### rust_math::trigonometry::find_quadrant(angle: f32) -> i32 { ... } :
 *Finds quadrant of angle in degrees*
+
+# Will be added:
+1 - Problem solvers, at least for find x at first. Time unknown.
+
+Thanks for using this project ❤️
