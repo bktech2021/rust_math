@@ -143,11 +143,13 @@ pub mod num {
         return number;
     }
     //This function returns the factorial of the number.
-    pub fn factorial(num: i128) -> i128 {
+    pub fn factorial(num: i32) -> i128 {
         if num == 0 {
             return 1;
+        } else if num > 0 {
+            return num as i128 * factorial(num - 1);
         } else {
-            return num * factorial(num - 1);
+            return -1;
         }
     }
 
